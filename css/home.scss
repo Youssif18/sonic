@@ -1,20 +1,25 @@
 .hero-section h3 {
   color: white;
 }
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: #232324;
 }
+
 .navbar {
   display: flex;
 }
+
 .logo {
   width: 30%;
 }
+
 .menu {
   display: flex;
 }
+
 a {
   color: #444444;
 }
@@ -24,13 +29,16 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 ul.features-list {
   margin: 0;
   padding-left: 0.1em;
 }
+
 .search-bar {
   display: flex;
 }
+
 input[type="text"] {
   width: 100%;
   background-color: #656161;
@@ -44,15 +52,18 @@ input[type="text"] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
+
 ::placeholder {
   color: white;
 }
+
 ul.features-list li {
   font-size: 1.1em;
   margin-bottom: 1em;
   margin-left: 2em;
   position: relative;
 }
+
 ul li:before {
   content: "";
   position: absolute;
@@ -63,9 +74,11 @@ ul li:before {
   margin-right: 0.5em;
   left: -2em;
 }
+
 .link {
   padding: 20px;
 }
+
 .link a {
   color: #ffffff;
   text-decoration: none;
