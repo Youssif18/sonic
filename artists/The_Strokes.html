@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>The Strokes</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://emorywheel.com/wp-content/uploads/2021/04/TheStrokes_Press_01_LR-8x10-1-scaled-1.jpeg"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">The Strokes
+                    </h2>
+                </div>
+                <p>The Strokes is an American rock band from New York City. Formed in 1998, the band is composed of
+                    singer Julian Casablancas, guitarists Nick Valensi and Albert Hammond Jr., bassist Nikolai Fraiture,
+                    and drummer Fabrizio Moretti. They were a leading group of the early-2000s indie rock revival.
+                    The release of their EP The Modern Age in early 2001 sparked a bidding war among major labels, with
+                    the band eventually signing to RCA Records. That summer, they released their debut album, Is This
+                    It, to critical acclaim and strong sales. It has since appeared on numerous "best album" lists. It
+                    was followed by Room on Fire (2003) and First Impressions of Earth (2006), both of which sold well
+                    but failed to match Is This It in critical success.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ewOPQZZn4SY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/b8-tXG8KrWs"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pT68FS3YbQ4"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1-W6whvn8Bs"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pT68FS3YbQ4"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Eminem</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://media1.fdncms.com/metrotimes/imager/u/original/26031120/shutterstock_1632717139.jpg"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">Eminem
+                    </h2>
+                </div>
+                <p>Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem (/ˌɛmɪˈnɛm/;
+                    formerly stylized as EMINƎM), is an American rapper, songwriter, and record producer. Eminem is
+                    among the best-selling music artists of all time, with estimated worldwide sales of over 220 million
+                    records. He is credited with popularizing hip hop in Middle America, and is critically acclaimed as
+                    one of the greatest rappers of all time.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_Yhyp-_hX2s"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eJO5HU_7_1w"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/r_0JjYUe5jo"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QfOb_KDKjHU"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/j5-yKhDd64s"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

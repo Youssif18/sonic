@@ -1,10 +1,16 @@
-.hero-section h3 {
+.hero-section h2 {
+  color: white;
+}
+
+.hero-section p {
   color: white;
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: #232324;
+  color: white;
 }
 
 .navbar {
@@ -48,7 +54,7 @@ input[type="text"] {
   width: 100%;
   background-color: #656161;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 2px solid transparent;
   border-radius: 75px;
   font-size: 16px;
@@ -100,6 +106,11 @@ ul li:before {
 .link a {
   color: #ffffff;
   text-decoration: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+
+
+
 /*# sourceMappingURL=home.css.map */

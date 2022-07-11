@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>David Guetta</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLSkHrWRNRk5A6TzoE_KqkcBsTwfday_ScHXJqkSkQ=s900-c-k-c0x00ffffff-no-rj"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">David Guetta
+                    </h2>
+                </div>
+                <p>Pierre David Guetta (/ˈɡɛtə/, French pronunciation: [pjɛʁ david ɡɛta]; born 7 November 1967) is a
+                    French DJ, record producer and songwriter. He has racked up over 50 million record sales globally,
+                    with more than 10 billion streams. In 2011 and 2020, Guetta was voted the number one DJ in the DJ
+                    Mag Top 100 DJs poll. In 2013, Billboard crowned "When Love Takes Over" as the number one
+                    dance-pop collaboration of all time.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mD2a9YzKV3w"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uO59tfQ2TbA"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5dbEhBKGOtY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BPiW0tkWfeg"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3x2ABSAMVno"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>Electronic dance music (EDM)</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;">
+                    <img src="https://lyricalust.files.wordpress.com/2015/04/mad1.jpg" width="100%" height=350"
+                        alt="img" style="margin:auto;padding:10px;border-radius: 30px;object-fit: cover;">
+                </div>
+                <h2 style="padding-top: 20px">Electronic dance music (EDM)</h2>
+                <p>Electronic dance music (EDM), also known as dance music, club music, or simply dance, is a broad
+                    range of percussive electronic music genres made largely for nightclubs, raves, and festivals. It is
+                    generally produced for playback by DJs who create seamless selections of tracks, called a mix, by
+                    segueing from one recording to another. EDM producers also perform their music live in a concert or
+                    festival setting in what is sometimes called a live PA.
+                    In the late 1980s and early 1990s, following the emergence of raving, pirate radios, PartyCrews,
+                    underground festivals and an upsurge of interest in club culture, EDM achieved widespread mainstream
+                    popularity in Europe. In the United States at that time, acceptance of dance culture was not
+                    universal outside of New York City; although both electro and Chicago house music were influential
+                    both in Europe and the United States, mainstream media outlets and the record industry remained
+                    openly hostile to it. There was also a perceived association between EDM and drug culture, which led
+                    governments at state and city level to enact laws and policies intended to halt the spread of rave
+                    culture. Fitness classes were first to use the music for work out classes in which help bring it to
+                    the mainstream and out of only underground events and clubs.
+                </p>
+                <h4 style="padding-top: 20px">Top artists</h4>
+
+                <div id="artists_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card"
+                        style="width: 150px;height:300px;border-radius: 40px;margin: 20px;display: none;background-color: transparent;cursor: pointer;">
+                        <div>
+                            <img src="../assets/black-sabath.jpg" width="100%" height="50%" alt="img" style="margin:auto;padding:10px;border-radius: 100%;  object-fit: cover;
+                                ">
+                        </div>
+                        <p style="text-align: center; color: white;">Kris Kristofferson</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Avicii",
+                img: "https://www.livetracklist.com/wp-content/uploads/profile-avicii.jpg"
+            },
+            {
+                name: "Skrillex",
+                img: "https://www.nme.com/wp-content/uploads/2016/09/2012SkrillexPR20022012-2.jpg",
+            },
+            {
+                name: "David Guetta",
+                img: "https://yt3.ggpht.com/ytc/AKedOLSkHrWRNRk5A6TzoE_KqkcBsTwfday_ScHXJqkSkQ=s900-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                name: "Calvin Harris",
+                img: "https://weraveyou.com/wp-content/uploads/2020/04/Calvin_Harris_Press_Shot.jpg"
+            },
+            {
+                name: "Daft Punk",
+                img: "https://weraveyou.com/wp-content/uploads/2021/06/Daft-Punk-2.jpeg"
+            },
+
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = artists[i].img;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+
+        itemLists = document.getElementsByClassName('card');
+
+
+        const parent = document.getElementById("card").parentElement;
+
+        Array.prototype.forEach.call(parent.children, child => {
+            child.onclick = function () {
+                console.log(child.children[1].innerHTML.replace(/ /g, "_"));
+                window.location.href = `../artists/${child.children[1].innerHTML.replace(/ /g, "_")}.html`;
+
+            }
+        });
+    </script>
+</body>
+
+</html>

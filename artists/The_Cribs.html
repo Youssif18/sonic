@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>The Cribs</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://diy-magazine.s3.amazonaws.com/d/diy/Artists/C/The-Cribs/Cribssmall-2.jpg"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">The Cribs
+                    </h2>
+                </div>
+                <p>The Cribs are a British indie rock band originally from Wakefield, West Yorkshire that formed in
+                    2001. The band consists of twins Gary and Ryan Jarman and their younger brother Ross Jarman. They
+                    were subsequently joined by ex-The Smiths guitarist Johnny Marr who was a formal member of the group
+                    from 2008 until 2011.
+                    The band, who first became active on the concert circuit in 2002, were initially tied to other
+                    like-minded UK bands of that time, most notably The Libertines, by a British music press that were
+                    looking for a 'British rearguard' to the wave of popular US alternative rock bands of the time. They
+                    had outgrown this tag by the time of the commercial success of their third LP. In 2008, Q magazine
+                    described the band as "The biggest cult band in the UK".
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+                ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oCNTYi9fHuo"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iwZ4TTSKZWY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1DbcAl3EbIs"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0QpkuxPJ-8A"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var amount = 5;
+            let artistsBody = document.getElementById("artists_body");
+
+            var artists = [
+                {
+                    name: "Black sabath",
+                    img: "black-sabath.jpg",
+                },
+                {
+                    name: "Pop",
+                    img: "pop.jpg"
+                },
+                {
+                    name: "Pop",
+                    img: "pop.jpg"
+                },
+                {
+                    name: "Pop",
+                    img: "pop.jpg"
+                },
+
+            ];
+            for (var i = 0; i < artists.length; i++) {
+                let elem = document.getElementById("card").cloneNode(true);
+                elem.style.color = "white";
+                elem.style.display = "block";
+
+                var c = elem.children;
+                c[0].children[0].src = `../assets/${artists[i].img}`;
+                c[1].innerHTML = artists[i].name;
+
+
+
+                artistsBody.appendChild(elem);
+            }
+        </script>
+</body>
+
+</html>

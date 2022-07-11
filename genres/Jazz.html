@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Jazz</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;">
+                    <img src="https://blog.sharifyapp.com/wp-content/uploads/2020/10/sam-browne-gRU0hwVo4uw-unsplash-scaled.jpg"
+                        width="100%" height=350" alt="img"
+                        style="margin:auto;padding:10px;border-radius: 30px;object-fit: cover;">
+                </div>
+                <h2 style="padding-top: 20px">Jazz</h2>
+                <p>Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana,
+                    United States, in the late 19th and early 20th centuries, with its roots in blues and
+                    ragtime.[1][2][3] Since the 1920s Jazz Age, it has been recognized as a major form of musical
+                    expression in traditional and popular music, linked by the common bonds of African-American and
+                    European-American musical parentage.[4] Jazz is characterized by swing and blue notes, complex
+                    chords, call and response vocals, polyrhythms and improvisation. Jazz has roots in West African
+                    cultural and musical expression, and in African-American music traditions.
+                </p>
+                <h4 style="padding-top: 20px">Top artists</h4>
+
+                <div id="artists_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card"
+                        style="width: 150px;height:300px;border-radius: 40px;margin: 20px;display: none;background-color: transparent;cursor: pointer;">
+                        <div>
+                            <img src="../assets/black-sabath.jpg" width="100%" height="50%" alt="img" style="margin:auto;padding:10px;border-radius: 100%;  object-fit: cover;
+                                ">
+                        </div>
+                        <p style="text-align: center; color: white;">Kris Kristofferson</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Louis Armstrong",
+                img: "https://i.guim.co.uk/img/media/5b511d67c68cb1d0c8827c8d24ea96f4c0260551/0_188_2681_1608/master/2681.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ffb8a68cb280241fad1e15a8ba9fcbe7"
+            },
+            {
+                name: "Charles Mingus",
+                img: "https://i1.wp.com/oildale.s3.amazonaws.com/wp-content/uploads/2016/05/22043955/Mingus-Resize-2.jpg?resize=640%2C536&ssl=1",
+            },
+            {
+                name: "Ornette Coleman",
+                img: "https://observer.com/wp-content/uploads/sites/2/2015/06/ornette-coleman1.jpg?quality=80"
+            },
+           
+
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = artists[i].img;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+
+        itemLists = document.getElementsByClassName('card');
+
+
+        const parent = document.getElementById("card").parentElement;
+
+        Array.prototype.forEach.call(parent.children, child => {
+            child.onclick = function () {
+                console.log(child.children[1].innerHTML.replace(/ /g, "_"));
+                window.location.href = `../artists/${child.children[1].innerHTML.replace(/ /g, "_")}.html`;
+
+            }
+        });
+    </script>
+</body>
+
+</html>

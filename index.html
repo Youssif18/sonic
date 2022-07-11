@@ -16,22 +16,27 @@
         <div style="width: 100%"></div>
         <div class="menu">
           <ul class="menu">
-            <li class="link"><a href="#">Home</a></li>
-            <li class="link"><a href="#">About</a></li>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="about.html">About</a></li>
           </ul>
         </div>
       </div>
       <div class="hero-section">
         <h3 style="text-align: center">All about music in one place</h3>
 
-        <div class="search-bar">
+        <!-- <div class="search-bar">
           <input type="text" placeholder="Search" />
-        </div>
+        </div> -->
         <h3 style="padding-top: 20px">Genres</h3>
         <div id="genres_body" style="display: flex;flex-wrap:wrap;width: 100%;
         ">
-          <div id="card"
-            style="background-color: #2c2c2c;width: 310px;height:230px;border-radius: 40px;margin: 20px;display: none;">
+          <div id="card" class="card" style="background-color: #2c2c2c;
+          width: 310px;
+          height: 230px;
+          border-radius: 40px;
+          margin: 20px;
+          display: none;
+          cursor: pointer;">
             <div style="display: flex;">
               <img src="assets/logo 2021-06-19 162023.png" width="80%" height="150" alt="img"
                 style="margin:auto;padding:10px;border-radius: 40px;">
@@ -50,19 +55,27 @@
     var genres = [
       {
         name: "Heavy metal",
-        img: "heavy_metal.jpg",
+        img: "https://pbs.twimg.com/media/DZW0DEYWsAIRSDB.jpg",
       },
       {
-        name: "Pop",
-        img: "pop.jpg"
+        name: "Country",
+        img: "https://matamatarsa.co.nz/wp-content/uploads/2020/06/country-music.jpg"
       },
       {
-        name: "Pop",
-        img: "pop.jpg"
+        name: "Electronic dance music (EDM)",
+        img: "https://lyricalust.files.wordpress.com/2015/04/mad1.jpg"
       },
       {
-        name: "Pop",
-        img: "pop.jpg"
+        name: "Hip-hop",
+        img: "https://www.abc.net.au/cm/rimage/12114358-16x9-large.jpg?v=2"
+      },
+      {
+        name: "Indie rock",
+        img: "https://static.tumblr.com/c2dffc9a681505acab6be9ae4f3c45fc/s7y1wpi/Lvzoo8thy/tumblr_static_tumblr_static_filename_focused_v3.jpg"
+      },
+      {
+        name: "Jazz",
+        img: "https://blog.sharifyapp.com/wp-content/uploads/2020/10/sam-browne-gRU0hwVo4uw-unsplash-scaled.jpg"
       },
 
     ];
@@ -70,19 +83,29 @@
       let elem = document.getElementById("card").cloneNode(true);
       elem.style.color = "white";
       elem.style.display = "block";
-      elem.id = 'card_' + i;
-      elem.id.onclick = function () {
-        console.log(genres[i].name);
-        window.location = genres[i].name.replace(/ /g, "_");
-      }
+
       var c = elem.children;
-      c[0].children[0].src = `assets/${genres[i].img}`;
+      c[0].children[0].src = genres[i].img;
       c[1].innerHTML = genres[i].name;
 
 
 
       genresBody.appendChild(elem);
     }
+    itemLists = document.getElementsByClassName('card');
+
+
+    const parent = document.getElementById("card").parentElement;
+
+    Array.prototype.forEach.call(parent.children, child => {
+      child.onclick = function () {
+        console.log(child.children[1].innerHTML.replace(/ /g, "_"));
+        window.location.href = `genres/${child.children[1].innerHTML.replace(/ /g, "_")}.html`;
+
+      }
+    });
+
+
   </script>
 </body>
 

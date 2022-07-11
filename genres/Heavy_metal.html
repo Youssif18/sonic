@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <title>Heavy Metal</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;">
+                    <img src="https://pbs.twimg.com/media/DZW0DEYWsAIRSDB.jpg" width="100%" height=350" alt="img"
+                        style="margin:auto;padding:10px;border-radius: 30px;object-fit: cover;">
+                </div>
+                <h2 style="padding-top: 20px">Heavy metal</h2>
+                <p>Heavy metal (or simply metal) is a genre of rock music[3][4] that developed in the late 1960s and
+                    early 1970s, largely in the United Kingdom and the United States.[5] With roots in blues rock,
+                    psychedelic rock, and acid rock,[6] heavy metal bands developed a thick, massive sound,
+                    characterized by distortion, extended guitar solos, emphatic beats, and loudness. The lyrics and
+                    performances are sometimes associated with aggression and machismo.[6]
+                    In 1968, three of the genre's most famous pioneers, Led Zeppelin, Black Sabbath, and Deep Purple,
+                    were founded.[7] Though they came to attract wide audiences, they were often derided by critics.
+                    Several American bands modified heavy metal into more accessible forms during the 1970s: the raw,
+                    sleazy sound and shock rock of Alice Cooper and Kiss; the blues-rooted rock of Aerosmith; and the
+                    flashy guitar leads and wild party rock of Van Halen.[8] During the mid-1970s, Judas Priest helped
+                    spur the genre's evolution by discarding much of its blues influence,[9][10] while Motörhead
+                    introduced a punk rock sensibility and an increasing emphasis on speed. Beginning in the late 1970s,
+                    bands in the new wave of British heavy metal such as Iron Maiden and Saxon followed in a similar
+                    vein. By the end of the decade, heavy metal fans became known as "metalheads" or "headbangers".
+                </p>
+                <h4 style="padding-top: 20px">Top artists</h4>
+
+                <div id="artists_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card"
+                        style="width: 150px;height:300px;border-radius: 40px;margin: 20px;display: none;background-color: transparent;cursor: pointer;">
+                        <div>
+                            <img src="../assets/black-sabath.jpg" width="100%" height="50%" alt="img" style="margin:auto;padding:10px;border-radius: 100%;  object-fit: cover;
+                                ">
+                        </div>
+                        <p style="text-align: center; color: white;">Black sabath</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Opeth",
+                img: "https://pbs.twimg.com/profile_images/1171438906509709313/2hkayFkd_400x400.jpg",
+            },
+            {
+                name: "Gojira",
+                img: "https://www.upsetmagazine.com/images/article/Artist-Images/G/Gojira/_crop1500x1000/GOJIRA-FORT-3302-Credit-Gabrielle-Duplantier-apr21.jpg",
+            },
+            {
+                name: "Black sabath",
+                img: "https://www.therockpit.net/wp-content/uploads/2021/04/blacksabbath-promo1.jpg",
+            },
+            {
+                name: "Tool",
+                img: "https://www.thomann.de/blog/wp-content/uploads/2019/08/Quiz_tool_header_770x425.jpg"
+            },
+            {
+                name: "Pantera",
+                img: "https://www.revolvermag.com/sites/default/files/styles/image_750_x_420/public/media/images/article/gettyimages-90433380.jpg?itok=dySbk24J&timestamp=1553174926"
+            },
+            {
+                name: "Led zeppelin",
+                img: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/03/13/14/led-zeppelin2.jpg?width=982&height=726&auto=webp&quality=75"
+            },
+            {
+                name: "Judas priest",
+                img: "https://dynamicmedia.livenationinternational.com/Media/v/j/s/46fc09ff-d835-4234-8f3d-80ff0f04643b.jpg"
+            },
+            {
+                name: "Megadeath",
+                img: "https://metalheadzone.com/wp-content/uploads/2017/02/megadeth-2017.jpg"
+            },
+            {
+                name: "Slayer",
+                img: "https://media.hardwiredmagazine.com/2018/01/slayer-band-2016.jpg"
+            },
+            {
+                name: "System of a down",
+                img: "https://townsquare.media/site/366/files/2021/04/System-of-a-Down-1.jpeg"
+            },
+            {
+                name: "Iron maiden",
+                img: "https://www.rocksceneauctions.com/wp-content/uploads/2018/12/iron_maiden_1992_s07486.jpg"
+            },
+            {
+                name: "Dream theater",
+                img: "https://pbs.twimg.com/profile_images/1070681522611634178/QTYNWzo1.jpg"
+            },
+            {
+                name: "Metallica",
+                img: "https://rockcelebrities.net/wp-content/uploads/2021/05/metallica-2021-black-album.jpg"
+            },
+            {
+                name: "Slipknot",
+                img: "https://images.kerrangcdn.com/K1774-Slipknot-cover-header.jpg?auto=compress&fit=crop&w=1008"
+            },
+            {
+                name: "Nightwish",
+                img: "https://global-uploads.webflow.com/5e235b1105541e20386fd864/5e389a0b18e5f98d2f232943_Nightwish2020f.jpg"
+            },
+            {
+                name: "Avenged sevenfold",
+                img: "https://i1.wp.com/www.burnyourears.de/uploads/mediapool/AvengedSevenfold.jpg"
+            },
+            {
+                name: "Korn",
+                img: "https://i.scdn.co/image/2277b8f0ae9316fd9572830763df39531fd224b8"
+            },
+            {
+                name: "Jinjer",
+                img: "https://townsquare.media/site/366/files/2021/06/attachment-jinjer_2021.png?w=980&q=75"
+            },
+            {
+                name: "Arch enemy",
+                img: "https://www.spirit-of-metal.com/les%20goupes/A/Arch%20Enemy/pics/80a3_1.jpg"
+            },
+            {
+                name: "Derev",
+                img: "http://bravewords.com/medias-static/images/news/2021/60108D87-derev-release-debut-single-futile-image.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = artists[i].img;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+
+        itemLists = document.getElementsByClassName('card');
+
+
+        const parent = document.getElementById("card").parentElement;
+
+        Array.prototype.forEach.call(parent.children, child => {
+            child.onclick = function () {
+                console.log(child.children[1].innerHTML.replace(/ /g, "_"));
+                window.location.href = `../artists/${child.children[1].innerHTML.replace(/ /g, "_")}.html`;
+
+            }
+        });
+    </script>
+</body>
+
+</html>

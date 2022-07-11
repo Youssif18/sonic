@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Future</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://cdn.vox-cdn.com/thumbor/rbf1IuiJioniTbmKNlm7HLpWj9I=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19856914/190617_future_getty_800x600.jpg"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">Future
+                    </h2>
+                </div>
+                <p>Nayvadius DeMun Wilburn (born November 20, 1983), better known by his stage name Future, is an
+                    American rapper, singer, songwriter, and record producer. Born and raised in Atlanta, Georgia, he
+                    first became involved in music as part of the Dungeon Family collective, where he was nicknamed "the
+                    Future". After amassing a series of mixtapes between 2010 and 2011, Future signed a major record
+                    label deal with Epic Records and Rocko's A1 Recordings, which helped launch Future's own label
+                    imprint, Freebandz. He subsequently released his debut album, Pluto, in April 2012 to commercial
+                    success. Future's second album, Honest, was released in April 2014, surpassing his debut on the
+                    album charts.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hz5sAOIlZYc"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/l0U7SxXHkPY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xvZqHgFz51I"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/K_9tX4eHztY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lw3Or6eqIpI"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

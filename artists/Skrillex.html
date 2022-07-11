@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Skrillex</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://www.nme.com/wp-content/uploads/2016/09/2012SkrillexPR20022012-2.jpg"
+                            width="90%" height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">Skrillex
+                    </h2>
+                </div>
+                <p>Sonny John Moore (born January 15, 1988), known professionally as Skrillex, is an American DJ, record
+                    producer, musician, singer and songwriter. Growing up in Northeast Los Angeles and in Northern
+                    California, he joined the American post-hardcore band From First to Last as the lead singer in 2004,
+                    and recorded two studio albums with the band (Dear Diary, My Teen Angst Has a Body Count, 2004, and
+                    Heroine, 2006) before leaving to pursue a solo career in 2007.[3][4] He began his first tour as a
+                    solo artist in late 2007. After recruiting a new band lineup, Moore joined the Alternative Press
+                    Tour to support bands such as All Time Low and The Rocket Summer, and appeared on the cover of
+                    Alternative Press' annual "100 Bands You Need to Know" issue.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YJVmu6yttiw"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nntGTK2Fhb0"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/U41bONK2V-U"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gh72dXr4fTM"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ik4USIChrkY"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

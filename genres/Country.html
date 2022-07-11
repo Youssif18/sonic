@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Country</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;">
+                    <img src="https://matamatarsa.co.nz/wp-content/uploads/2020/06/country-music.jpg" width="100%"
+                        height=350" alt="img" style="margin:auto;padding:10px;border-radius: 30px;object-fit: cover;">
+                </div>
+                <h2 style="padding-top: 20px">Country</h2>
+                <p>Country (also called country and western) is a genre of popular music that originated with blues,
+                    old-time music, and various types of American folk music including Appalachian, Cajun, Creole, and
+                    the cowboy Western music styles of New Mexico, Red Dirt, Tejano, and Texas country. Its popularized
+                    roots originate in the Southern and Southwestern United States of the early 1920s./p>
+                <h4 style="padding-top: 20px">Top artists</h4>
+
+                <div id="artists_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card"
+                        style="width: 150px;height:300px;border-radius: 40px;margin: 20px;display: none;background-color: transparent;cursor: pointer;">
+                        <div>
+                            <img src="../assets/black-sabath.jpg" width="100%" height="50%" alt="img" style="margin:auto;padding:10px;border-radius: 100%;  object-fit: cover;
+                                ">
+                        </div>
+                        <p style="text-align: center; color: white;">Kris Kristofferson</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Johnny Cash",
+                img: "https://rockcelebrities.net/wp-content/uploads/2021/04/johnny-cash-2021.jpg"
+            },
+            {
+                name: "Kris Kristofferson",
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/2018_Kris_Kristofferson_-_by_2eight_-_DSC5043_cropped.jpg/220px-2018_Kris_Kristofferson_-_by_2eight_-_DSC5043_cropped.jpg",
+            },
+            {
+                name: "Willie Nelson",
+                img: "https://townsquare.media/site/204/files/2020/06/willie-nelson-pr-press-photo-2020.jpg?w=980&q=75"
+            },
+
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = artists[i].img;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+
+        itemLists = document.getElementsByClassName('card');
+
+
+        const parent = document.getElementById("card").parentElement;
+
+        Array.prototype.forEach.call(parent.children, child => {
+            child.onclick = function () {
+                console.log(child.children[1].innerHTML.replace(/ /g, "_"));
+                window.location.href = `../artists/${child.children[1].innerHTML.replace(/ /g, "_")}.html`;
+
+            }
+        });
+    </script>
+</body>
+
+</html>

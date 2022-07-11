@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>REM</title>
+    <link rel="stylesheet" href="../css/home.css" />
+
+</head>
+
+<body>
+    <div style="display: flex">
+        <div style="width: 80%; margin: auto">
+            <div class="navbar">
+                <div>
+                    <img src="../assets/logo 2021-06-19 162023.png" class="logo" alt="logo" />
+                </div>
+                <div style="width: 100%"></div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="link"><a href="../index.html">Home</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div style="display: flex;align-items: center;height: 250px;
+                ">
+
+                    <div style="width: 150;">
+                        <img src="https://static.spin.com/files/field/image/110922-rem-6-414x275.png" width="90%"
+                            height="50%" alt="img" style="border-radius: 100%;  object-fit: cover;
+                            ">
+                    </div>
+                    <h2 style="text-align: center; color: white;">REM
+                    </h2>
+                </div>
+                <p>R.E.M. was an American rock band from Athens, Georgia, formed in 1980 by drummer Bill Berry,
+                    guitarist Peter Buck, bassist Mike Mills, and lead vocalist Michael Stipe, who were students at the
+                    University of Georgia. Liner notes from some of the band's albums list attorney Bertis Downs and
+                    manager Jefferson Holt as non-musical members. One of the first alternative rock bands, R.E.M. was
+                    noted for Buck's ringing, arpeggiated guitar style; Stipe's distinctive vocal quality, unique stage
+                    presence, and obscure lyrics; Mills's melodic bass lines and backing vocals; and Berry's tight,
+                    economical drumming style. In the early 1990s, other alternative rock acts such as Nirvana and
+                    Pavement viewed R.E.M. as a pioneer of the genre. After Berry left the band in 1997, the band
+                    continued its career in the 2000s with mixed critical and commercial success. The band broke up
+                    amicably in 2011 with members devoting time to solo projects after having sold more than 85 million
+                    albums worldwide and becoming one of the world's best-selling music acts.
+                </p>
+                <h4 style="padding-top: 20px">Top songs</h4>
+
+                <div id="songs_body" style="display: flex;flex-wrap:wrap;width: 100%;
+            ">
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5rOiW_xY-kc"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YYOKMUTTDdA"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z0GFRcFm-aY"></iframe>
+                    </div>
+                    <div id="card" class="card" style="padding-top:20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dLxpNiF0YKs"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var amount = 5;
+        let artistsBody = document.getElementById("artists_body");
+
+        var artists = [
+            {
+                name: "Black sabath",
+                img: "black-sabath.jpg",
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+            {
+                name: "Pop",
+                img: "pop.jpg"
+            },
+
+        ];
+        for (var i = 0; i < artists.length; i++) {
+            let elem = document.getElementById("card").cloneNode(true);
+            elem.style.color = "white";
+            elem.style.display = "block";
+
+            var c = elem.children;
+            c[0].children[0].src = `../assets/${artists[i].img}`;
+            c[1].innerHTML = artists[i].name;
+
+
+
+            artistsBody.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>
